@@ -1,9 +1,20 @@
+import { useContext } from "react";
+import { SetCountContext } from "../_app";
+
 export default function ComponentC(props) {
 
-    console.log("Component(C) Rendered");
+    const setCount = useContext(SetCountContext);
+    
+    console.log("Component(C) Rendered.");
+    
     return (
         <>
-            <button onClick={e => {console.log("Clicked")}}>Increase Value</button>
+            <h5>This coming from Component(C)</h5>
+            <button onClick={e => {
+                setCount(count => count + 1)}
+                }>
+                    Increase Value
+                </button>
         </>
-    );
+    )
 }

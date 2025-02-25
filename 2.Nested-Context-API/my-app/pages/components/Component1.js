@@ -5,7 +5,7 @@ export default function Component1(props) {
     console.log("Component(1) Rendered");
     return (
         <>
-            <Component2 />
+            <Component2 count={props.count}/>
         </>
     );
 }
