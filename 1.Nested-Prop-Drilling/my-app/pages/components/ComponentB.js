@@ -4,7 +4,7 @@ export default function ComponentB(props) {
     console.log("Component(B) Rendered");
     return (
         <>
-            <ComponentC />
+            <ComponentC setCount={props.setCount} />
         </>
     );
 }
