@@ -1,10 +1,14 @@
-import ComponentB from "./ComponentB";
-export default function Component1(props) {
+import ComponentB from "../components/ComponentB";
 
-    console.log("Component(A) Rendered");
-    return (
-        <>
-            <ComponentB />
-        </>
-    );
+export default function ComponentA(){
+  console.log("Component(A) Rendered");
+
+  return (
+    <>
+      Component A
+      <ul>
+        <li><ComponentB /></li>
+      </ul>
+    </>
+  );
 }
